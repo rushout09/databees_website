@@ -55,7 +55,7 @@ def navbar() -> rx.Component:
                     ),
                     rx.link(
                         rx.button(
-                            "Sign in",
+                            "Talk to us now",
                             bg=styles.DOC_TEXT_COLOR,
                             box_shadow=styles.DOC_SHADOW_LIGHT,
                             color="white",
@@ -66,7 +66,7 @@ def navbar() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="/signin",
+                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
                         _hover={"text_decoration": "none"},
                     ),
                     spacing="1em",

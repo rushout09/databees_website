@@ -1,6 +1,6 @@
 *.db
 *.py[cod]
+.env
+.idea/
 .web
 __pycache__/
-.idea/
-.env

@@ -645,34 +645,34 @@ app.add_page(
     route="/blog/[slug]",
     on_load=PostState.load_post,
 )
-app.add_page(
-    signin, 
-    title="PySaaS | Sign in",
-    description="TBD description.",
-    image="/preview.png",
-    on_load=AuthState.clear_errors,
-)
-app.add_page(
-    signup, 
-    title="PySaaS | Sign up",
-    description="TBD description.",
-    image="/preview.png",
-    on_load=AuthState.clear_errors,
-)
-app.add_page(
-    signout, 
-    title="PySaaS | Sign out",
-    description="TBD description.",
-    image="/preview.png",
-    on_load=AuthState.signout,
-)
-app.add_page(
-    dashboard,
-    title="PySaaS | Dashboard",
-    description="TBD description.",
-    image="/preview.png",
-    on_load=AuthState.verify_and_load,
-)
+# app.add_page(
+#     signin,
+#     title="PySaaS | Sign in",
+#     description="TBD description.",
+#     image="/preview.png",
+#     on_load=AuthState.clear_errors,
+# )
+# app.add_page(
+#     signup,
+#     title="PySaaS | Sign up",
+#     description="TBD description.",
+#     image="/preview.png",
+#     on_load=AuthState.clear_errors,
+# )
+# app.add_page(
+#     signout,
+#     title="PySaaS | Sign out",
+#     description="TBD description.",
+#     image="/preview.png",
+#     on_load=AuthState.signout,
+# )
+# app.add_page(
+#     dashboard,
+#     title="PySaaS | Dashboard",
+#     description="TBD description.",
+#     image="/preview.png",
+#     on_load=AuthState.verify_and_load,
+# )
 app.add_custom_404_page(
     not_found,
     title="PySaaS | Page not found",

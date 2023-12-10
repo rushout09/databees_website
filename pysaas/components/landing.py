@@ -1580,7 +1580,7 @@ def cta() -> rx.Component:
                     pysaas.State.signed_out,
                     rx.link(
                         rx.button(
-                            "Try it for free",
+                            "Talk to us now",
                             bg="white",
                             box_shadow=styles.DOC_SHADOW_LIGHT,
                             color="black",
@@ -1591,7 +1591,7 @@ def cta() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="/signup",
+                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
                     ),
                     rx.link(
                         rx.button(
