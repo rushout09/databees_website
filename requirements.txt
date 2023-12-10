@@ -1,0 +1,9 @@
+reflex
+pandas
+yfinance
+requests
+pyrebase4
+email_validator
+python-dotenv
+urllib3==1.26.15
+requests-toolbelt==0.10.1
