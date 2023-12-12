@@ -629,20 +629,20 @@ async def subscription_update(request: Request):
 # Define app pages and routes
 app.add_page(
     index,
-    title="PySaaS",
+    title="DataBees",
     description="TBD description.",
     image="/preview.png",
 )
 app.add_page(
     blog,
-    title="PySaaS | Blog",
+    title="DataBees | Blog",
     description="TBD description.",
     image="/preview.png",
     on_load=BlogState.load_posts,
 )
 app.add_page(
     post,
-    title="PySaaS | Blog",
+    title="DataBees | Blog",
     description="TBD description.",
     image="/preview.png",
     route="/blog/[slug]",
@@ -678,25 +678,25 @@ app.add_page(
 # )
 app.add_custom_404_page(
     not_found,
-    title="PySaaS | Page not found",
+    title="DataBees | Page not found",
     description="TBD description.",
     image="/preview.png",
 )
 app.add_page(
     terms,
-    title='PySaaS | Terms and Condition',
+    title='DataBees | Terms and Condition',
     description='TBD description',
     image='/preview.png',
 )
 app.add_page(
     privacy,
-    title='PySaaS | Privacy Policy',
+    title='DataBees | Privacy Policy',
     description='TBD Description',
     image='/preview.png',
 )
 app.add_page(
     cookies,
-    title='PySaaS | Cookies Policy',
+    title='DataBees | Cookies Policy',
     description='TBD description',
     image='/preview.png',
 )
