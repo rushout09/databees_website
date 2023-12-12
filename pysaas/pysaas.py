@@ -8,7 +8,6 @@ This file contains:
 
 '''
 
-
 import reflex as rx
 import pandas as pd
 import yfinance as yf
@@ -37,7 +36,6 @@ from pysaas.pages.terms import terms
 from pysaas.pages.privacy import privacy
 from pysaas.pages.cookies import cookies
 from pysaas.styles import BASE_STYLE
-
 
 # Configure secrets
 load_dotenv()
@@ -88,31 +86,31 @@ class State(rx.State):
     @rx.var
     def signed_out(self):
         return not self.signed_in
-    
+
     @rx.var
     def get_user_email(self) -> str:
         if self.user_email is None:
             return ""
         return self.user_email.lower()
-    
+
     @rx.var
     def get_user_name(self) -> str:
         if self.name is None:
             return ""
         return self.name
-    
+
     @rx.var
     def get_renew_date(self) -> str:
         if not self.renews_at:
             return ""
         return parser.isoparse(self.renews_at).strftime("%B %d, %Y")
-    
+
     @rx.var
     def get_manage_sub_url(self) -> str:
         if not self.manage_sub_url:
             return ""
         return self.manage_sub_url
-    
+
     @rx.var
     def get_lm_url(self) -> str:
         if self.signed_in:
@@ -145,7 +143,7 @@ class AuthState(State):
     def verify_and_load(self):
         if self.signed_out:
             return rx.redirect("/signin")
-        
+
         DashState.load_data("BTC")
 
         try:
@@ -153,11 +151,11 @@ class AuthState(State):
             for user in users:
                 if user.val()["email"] == self.user_email:
                     self.plan = user.val()["plan"]
-                    self.renews_at = user.val()["renews_at"] 
+                    self.renews_at = user.val()["renews_at"]
                     self.sub_id = user.val()["sub_id"]
-                    
+
                     if self.sub_id:
-                        try:    
+                        try:
                             url = f"https://api.lemonsqueezy.com/v1/subscriptions/{self.sub_id}"
                             r = requests.get(url, headers={
                                 "Authorization": f"Bearer {LM_API_KEY}",
@@ -195,7 +193,7 @@ class AuthState(State):
                         self.signed_in = True
                         DashState.name_field = self.name
                         return rx.redirect("/dashboard")
-            
+
             self.error_message = "Invalid email or password. Try again."
             self.show_error = True
             return
@@ -212,7 +210,7 @@ class AuthState(State):
             self.error_message = str(e)
             self.show_error = True
             return
-        
+
         if len(self.password_field) < 6:
             self.error_message = "Password must contain at least 6 characters."
             self.show_error = True
@@ -235,7 +233,7 @@ class AuthState(State):
             self.refresh_token = new_user["refreshToken"]
 
             user_data = {
-                "email": self.user_email, 
+                "email": self.user_email,
                 "name": self.name,
                 "plan": self.plan,
                 "renews_at": self.renews_at,
@@ -250,7 +248,7 @@ class AuthState(State):
             self.error_message = "Email already exists."
             self.show_error = True
             return
-        
+
     def signout(self):
         self.user_email = None
         self.name = None
@@ -262,7 +260,7 @@ class AuthState(State):
         self.refresh_token = None
         self.signed_in = False
         return rx.redirect("/")
-    
+
 
 # The index state class
 # Define pricing options to display
@@ -329,7 +327,7 @@ class PostState(State):
     @rx.var
     def post_slug(self):
         return self.get_query_params().get("slug", "No slug")
-    
+
     def load_post(self):
         url = f"https://api.notion.com/v1/databases/{NOTION_DB_ID}/query"
         r = requests.post(url, headers={
@@ -353,9 +351,9 @@ class PostState(State):
 
         if not self.page_id:
             return rx.redirect("/oops")
-        
+
         url = f"https://api.notion.com/v1/blocks/{self.page_id}/children?page_size=100"
-        r = requests.get(url, headers = {
+        r = requests.get(url, headers={
             "Authorization": f"Bearer {NOTION_API_KEY}",
             "Notion-Version": "2022-06-28"
         })
@@ -424,7 +422,7 @@ class PostState(State):
                     self.content.append(PostSectionContent(is_image=True, url=result["image"]["file"]["url"]))
             self.paragraphs.append(self.content)
             self.content = []
-                
+
         self.show_spinner = False
 
 
@@ -459,7 +457,7 @@ class DashState(State):
     @rx.var
     def data_len(self) -> int:
         return len(self.close)
-    
+
     @rx.var
     def curr_price(self) -> str:
         return "$" + str(self.close[len(self.close) - 1])
@@ -467,11 +465,11 @@ class DashState(State):
     @rx.var
     def delta(self) -> str:
         return str(round(100 * (self.close[len(self.close) - 1] - self.close[0]) / self.close[0], 2))
-    
+
     @rx.var
     def increase(self) -> bool:
         return (self.close[len(self.close) - 1] - self.close[0]) / self.close[0] > 0
-    
+
     def load_data(self, coin):
         data = yf.Ticker(coin + "-USD")
         data = pd.DataFrame(data.history(period="1mo", rounding="True"))
@@ -480,11 +478,11 @@ class DashState(State):
 
         self.data = data[["Date", "Open", "High", "Low", "Close", "Volume"]]
         self.close = list(self.data["Close"])
-    
+
     # State functions for user management
     def set_name(self, name):
         self.name_field = name
-    
+
     def set_password(self, password):
         self.password_field = password
 
@@ -497,9 +495,9 @@ class DashState(State):
     def cancel_subscription(self):
         if not self.confirmed_cancel:
             return
-        
+
         if self.sub_id:
-            try:    
+            try:
                 url = f"https://api.lemonsqueezy.com/v1/subscriptions/{self.sub_id}"
                 r = requests.delete(url, headers={
                     "Authorization": f"Bearer {LM_API_KEY}",
@@ -529,7 +527,7 @@ class DashState(State):
     def update_user_data(self):
         if self.signed_out:
             return rx.redirect("/signin")
-        
+
         try:
             users = db.child("users").get().each()
             for user in users:
@@ -542,7 +540,7 @@ class DashState(State):
                     self.close_button_message = "Close"
                     self.show_alert = True
                     return
-                
+
             self.profile_error_message = "Failed to update user data. Try again."
             self.show_profile_error = True
             return
@@ -570,7 +568,7 @@ class DashState(State):
                     self.email_error_message = "Failed to send email. Try again."
                     self.show_email_error = True
                     return
-                
+
             self.email_error_message = "Failed to send email. Try again."
             self.show_email_error = True
             return
@@ -584,6 +582,11 @@ class DashState(State):
 app = rx.App(state=State, style=BASE_STYLE)
 
 
+@app.api.get("/health-check", status_code=200)
+async def health_check():
+    return {"status": "healthy"}
+
+
 # Webhook listener
 # Allows your app to stay in sync with Lemon Squeezy subscription updates
 @app.api.post("/webhooks/lmsqueezy", status_code=200)
@@ -593,7 +596,7 @@ async def subscription_update(request: Request):
     digest = hmac.new(LM_SIGNING_SECRET.encode(), payload, hashlib.sha256).hexdigest()
     if not hmac.compare_digest(digest, signature):
         raise Exception(400, "Invalid signature.")
-    
+
     body = json.loads(payload)
     try:
         event = body["meta"]["event_name"]
@@ -621,25 +624,25 @@ async def subscription_update(request: Request):
         return {"message": "No updates made"}
     except Exception as e:
         raise HTTPException(400, detail=str(e))
-    
+
 
 # Define app pages and routes
 app.add_page(
-    index, 
+    index,
     title="PySaaS",
     description="TBD description.",
     image="/preview.png",
 )
 app.add_page(
-    blog, 
-    title="PySaaS | Blog", 
+    blog,
+    title="PySaaS | Blog",
     description="TBD description.",
     image="/preview.png",
     on_load=BlogState.load_posts,
 )
 app.add_page(
-    post, 
-    title="PySaaS | Blog", 
+    post,
+    title="PySaaS | Blog",
     description="TBD description.",
     image="/preview.png",
     route="/blog/[slug]",
