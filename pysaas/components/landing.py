@@ -26,12 +26,12 @@ def hero() -> rx.Component:
                 ),
                 rx.mobile_only(
                     rx.text(
-                        "Ship faster with",
+                        "Collect and Curate Datasets faster with",
                         font_size="1.5em",
                         font_weight=700,
                     ),
                     rx.text(
-                        "PySaaS",
+                        "DataBees",
                         font_size="1.5em",
                         font_weight=800,
                         background_image="linear-gradient(371.68deg, #7F00FF  25%, #6495ED 50%)",
