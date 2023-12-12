@@ -1,0 +1,14 @@
+[Unit]
+Description=Databees Website App
+After=network.target
+
+[Service]
+ExecStart=/home/ubuntu/databees_website/venv/bin/reflex run
+WorkingDirectory=/home/ubuntu/databees_website
+User=ubuntu
+Group=ubuntu
+Restart=always
+Environment="API_URL=https://backend.databees.work"
+
+[Install]
+WantedBy=multi-user.target
