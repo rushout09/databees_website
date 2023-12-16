@@ -15,25 +15,25 @@ def footer() -> rx.Component:
                 rx.vstack(
                     rx.text("Product", color=styles.DOC_REG_TEXT_COLOR),
                     rx.link("Features", href="/#features", style=styles.FOOTER_ITEM_STYLE),
-                    rx.link("Pricing", href="/#pricing", style=styles.FOOTER_ITEM_STYLE),
+                    # rx.link("Pricing", href="/#pricing", style=styles.FOOTER_ITEM_STYLE),
                     rx.link("Blog", href="/blog", style=styles.FOOTER_ITEM_STYLE),
                     align_items="start",
                 ),
                 rx.vstack(
                     rx.text("Social", color=styles.DOC_REG_TEXT_COLOR),
                     rx.link(
-                        "Twitter",
+                        "LinkedIn",
                         href="/",
                         style=styles.FOOTER_ITEM_STYLE,
                     ),
                     rx.link(
-                        "Discord",
-                        href="/",
+                        "Contact Us",
+                        href="mailto: hello@databees.work",
                         style=styles.FOOTER_ITEM_STYLE,
                     ),
                     rx.link(
                         "GitHub",
-                        href="/",
+                        href="https://github.com/rushout09/databees_website",
                         style=styles.FOOTER_ITEM_STYLE,
                     ),
                     align_items="start",
@@ -64,7 +64,7 @@ def footer() -> rx.Component:
             ),
             rx.hstack(
                 rx.text(
-                    "Powered by PySaaS",
+                    "Artificial Intelligence for the Real World",
                     font_weight="500",
                 ),
                 justify="center",
@@ -93,7 +93,7 @@ def blog_footer() -> rx.Component:
                     rx.vstack(
                         rx.text("Product", color=styles.DOC_REG_TEXT_COLOR),
                         rx.link("Features", href="/#features", style=styles.FOOTER_ITEM_STYLE),
-                        rx.link("Pricing", href="/#pricing", style=styles.FOOTER_ITEM_STYLE),
+                        # rx.link("Pricing", href="/#pricing", style=styles.FOOTER_ITEM_STYLE),
                         rx.link("Blog", href="/blog", style=styles.FOOTER_ITEM_STYLE),
                         align_items="start",
                     ),
@@ -103,18 +103,18 @@ def blog_footer() -> rx.Component:
                     rx.vstack(
                         rx.text("Social", color=styles.DOC_REG_TEXT_COLOR),
                         rx.link(
-                            "Twitter",
+                            "LinkedIn",
                             href="/",
                             style=styles.FOOTER_ITEM_STYLE,
                         ),
                         rx.link(
-                            "Discord",
-                            href="/",
+                            "Contact Us",
+                            href="mailto: hello@databees.work",
                             style=styles.FOOTER_ITEM_STYLE,
                         ),
                         rx.link(
                             "GitHub",
-                            href="/",
+                            href="https://github.com/rushout09/databees_website",
                             style=styles.FOOTER_ITEM_STYLE,
                         ),
                         align_items="start",
@@ -152,7 +152,7 @@ def blog_footer() -> rx.Component:
                 ~pysaas.State.show_spinner,
                 rx.hstack(
                     rx.text(
-                        "Powered by PySaaS",
+                        "Artificial Intelligence for the Real World",
                         font_weight="500",
                     ),
                     justify="center",

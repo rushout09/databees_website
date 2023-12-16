@@ -11,7 +11,7 @@ def index() -> rx.Component:
             navbar(),
             hero(),
             features(),
-            pricing(),
+            # pricing(),
             cta(),
             footer(),
             width="100%",

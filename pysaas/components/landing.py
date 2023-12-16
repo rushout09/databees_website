@@ -10,8 +10,8 @@ def hero() -> rx.Component:
             rx.box(
                 rx.tablet_and_desktop(
                     rx.text(
-                        "Collect and Curate Datasets faster with",
-                        font_size="2em",
+                        "Transforming AI Training with Premium Dataset Services.",
+                        font_size="1.5em",
                         font_weight=700,
                     ),
                     rx.text(
@@ -26,7 +26,7 @@ def hero() -> rx.Component:
                 ),
                 rx.mobile_only(
                     rx.text(
-                        "Collect and Curate Datasets faster with",
+                        "Transforming AI Training with Premium Dataset Services.",
                         font_size="1.5em",
                         font_weight=700,
                     ),
@@ -42,7 +42,7 @@ def hero() -> rx.Component:
                 ),
             ),
             rx.container(
-                "Welcome to your new landing page, built in pure Python.",
+                "Your Gateway to High-Quality, Cost-Effective AI Datasets.",
                 color="grey",
                 font_size="0.6em",
                 text_align="center",
@@ -63,7 +63,7 @@ def hero() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="/signup",
+                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
                     ),
                     rx.link(
                         rx.button(
@@ -78,12 +78,12 @@ def hero() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="/dashboard",
+                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
                     ),
                 ),
                 rx.link(
                     rx.button(
-                        "View Pricing",
+                        "Send us your requirements",
                         bg="white",
                         box_shadow=styles.DOC_SHADOW_LIGHT,
                         color="black",
@@ -94,7 +94,7 @@ def hero() -> rx.Component:
                             "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                         },
                     ),
-                    href="/#pricing",
+                    href="mailto: hello@databees.work",
                     _hover={
                         "text_decoration": "none",
                     }
@@ -133,7 +133,7 @@ def features() -> rx.Component:
             padding_bottom="0.5em",
         ),
         rx.container(
-            "Focus on delivering value to customers and generating revenue.",
+            "Unleash the Power of Data Quality in AI",
             color="grey",
             font_size="1.25em",
             text_align="center",
@@ -151,13 +151,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "Authentication",
+                                    "Shorter Turnaround Time",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "PySaaS supports Firebase authentication and real-time database, allowing multiple users to see changes when data is created or edited.",
+                                    "Unlock rapid progress with our swift dataset delivery, accelerating your AI model training timelines.",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -175,13 +175,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "Subscriptions",
+                                    "Data Quality and AI",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "Let customers manage billing settings directly in your app, and remove the headache of tax compliance by using Lemon Squeezy as a MoR.",
+                                    "Elevate your AI model's performance by ensuring the highest standards of data quality in every dataset.",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -203,13 +203,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "Notion CMS",
+                                    "Economical Pricing",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "A simple publishing system is critical to consistent content creation. Now, you can publish blog posts directly from your Notion database.",
+                                    "Maximize your budget without compromising quality—experience affordability without sacrificing excellence.",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -227,13 +227,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "UI Styling",
+                                    "Data Augmentation",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "Don't worry about fancy styling libraries if that isn't your thing. Create beautiful UI components with ease using Python functions instead.",
+                                    "Enhance your dataset diversity through sophisticated augmentation techniques, optimizing AI model robustness",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -255,13 +255,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "Hosting",
+                                    "Data Annotation",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "Deploy to an existing cloud provider of your choice by simply editing a configuration file to match the IP address of your server.",
+                                    "Empower your models with labeled datasets, meticulously annotated for seamless integration into your AI training pipeline.",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -279,13 +279,13 @@ def features() -> rx.Component:
                                     width="2em",
                                 ),
                                 rx.text(
-                                    "Pure Python",
+                                    "Data Collection",
                                     font_size=styles.H2_FONT_SIZE,
                                     font_weight=styles.BOLD_WEIGHT,
                                     color="black",
                                 ),
                                 rx.text(
-                                    "Gone are the days of learning countless languages and frameworks. Build your frontend and backend, everything in pure Python.",
+                                    "Access vast and diverse datasets, carefully curated to meet the unique requirements of your AI applications.",
                                     color="#676767",
                                 ),
                                 margin_bottom="1em",
@@ -311,13 +311,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "Authentication",
+                            "Shorter Turnaround Time",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "PySaaS supports Firebase authentication and real-time database, allowing multiple users to see changes when data is created or edited.",
+                            "Unlock rapid progress with our swift dataset delivery, accelerating your AI model training timelines.",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -333,13 +333,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "Subscriptions",
+                            "High Accuracy",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "Let customers manage billing settings directly in your app, and remove the headache of tax compliance by using Lemon Squeezy as a MoR.",
+                            "Elevate model performance with meticulously curated datasets, ensuring precision and reliability in every dataset.",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -355,13 +355,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "Notion CMS",
+                            "Economical Pricing",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "A simple publishing system is critical to consistent content creation. Now, you can publish blog posts directly from your Notion database.",
+                            "Maximize your budget without compromising quality—experience affordability without sacrificing excellence.",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -377,13 +377,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "UI Styling",
+                            "Data Augmentation",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "Don't worry about fancy styling libraries if that isn't your thing. Create beautiful UI components with ease using Python functions instead.",
+                            "Enhance your dataset diversity through sophisticated augmentation techniques, optimizing AI model robustness",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -399,13 +399,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "Hosting",
+                            "Data Annotation",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "Deploy to an existing cloud provider of your choice by simply editing a configuration file to match the IP address of your server.",
+                            "Empower your models with labeled datasets, meticulously annotated for seamless integration into your AI training pipeline.",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -421,13 +421,13 @@ def features() -> rx.Component:
                             width="2em",
                         ),
                         rx.text(
-                            "Pure Python",
+                            "Data Collection",
                             font_size=styles.H2_FONT_SIZE,
                             font_weight=styles.BOLD_WEIGHT,
                             color="black",
                         ),
                         rx.text(
-                            "Gone are the days of learning countless languages and frameworks. Build your frontend and backend, everything in pure Python.",
+                            "Access vast and diverse datasets, carefully curated to meet the unique requirements of your AI applications.",
                             color="#676767",
                         ),
                         margin_bottom="1em",
@@ -1572,7 +1572,7 @@ def cta() -> rx.Component:
         rx.box(
             rx.vstack(
                 rx.heading(
-                    "Start for free today.",
+                    "We respond lightning fast say hello@databees.work ",
                     font_weight=styles.BOLD_WEIGHT,
                     font_size=styles.H3_FONT_SIZE,
                 ),
@@ -1580,7 +1580,7 @@ def cta() -> rx.Component:
                     pysaas.State.signed_out,
                     rx.link(
                         rx.button(
-                            "Talk to us now",
+                            "Send us your requirements.",
                             bg="white",
                             box_shadow=styles.DOC_SHADOW_LIGHT,
                             color="black",

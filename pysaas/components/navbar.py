@@ -35,15 +35,15 @@ def navbar() -> rx.Component:
                             **styles.BUTTON_STYLE,
                         ),
                     ),
-                    rx.tablet_and_desktop(
-                        rx.link(
-                            rx.text(
-                                "Pricing",
-                            ),
-                            href="/#pricing",
-                            **styles.BUTTON_STYLE,
-                        ),
-                    ),
+                    # rx.tablet_and_desktop(
+                    #     rx.link(
+                    #         rx.text(
+                    #             "Pricing",
+                    #         ),
+                    #         href="/#pricing",
+                    #         **styles.BUTTON_STYLE,
+                    #     ),
+                    # ),
                     rx.tablet_and_desktop(
                         rx.link(
                             rx.text(

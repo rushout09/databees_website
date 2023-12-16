@@ -630,13 +630,13 @@ async def subscription_update(request: Request):
 app.add_page(
     index,
     title="DataBees",
-    description="TBD description.",
+    description="Supercharge your AI models with our premium dataset services—shorter turnaround, high accuracy, and cost-effectiveness. From data annotation to diverse collections, we're your gateway to artificial intelligence excellence.",
     image="/preview.png",
 )
 app.add_page(
     blog,
     title="DataBees | Blog",
-    description="TBD description.",
+    description="Blog on collecting, annotating, and augmenting AI Datasets.",
     image="/preview.png",
     on_load=BlogState.load_posts,
 )
