@@ -63,7 +63,7 @@ def hero() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
+                        href="https://calendly.com/databees-intro/30min",
                     ),
                     rx.link(
                         rx.button(
@@ -78,12 +78,12 @@ def hero() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
+                        href="https://calendly.com/databees-intro/30min",
                     ),
                 ),
                 rx.link(
                     rx.button(
-                        "Send us your requirements",
+                        "Email hello@databees.work",
                         bg="white",
                         box_shadow=styles.DOC_SHADOW_LIGHT,
                         color="black",
@@ -1580,7 +1580,7 @@ def cta() -> rx.Component:
                     pysaas.State.signed_out,
                     rx.link(
                         rx.button(
-                            "Send us your requirements.",
+                            "Schedule a quick call.",
                             bg="white",
                             box_shadow=styles.DOC_SHADOW_LIGHT,
                             color="black",
@@ -1591,7 +1591,7 @@ def cta() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
+                        href="https://calendly.com/databees-intro/30min",
                     ),
                     rx.link(
                         rx.button(

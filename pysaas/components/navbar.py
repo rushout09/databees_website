@@ -66,7 +66,7 @@ def navbar() -> rx.Component:
                                 "box_shadow": "0 0 .12em .07em #6495ED, 0 0 .25em .11em #6495ED",
                             },
                         ),
-                        href="https://forms.gle/TDSMC6ZekeScEZgD9",
+                        href="https://calendly.com/databees-intro/30min",
                         _hover={"text_decoration": "none"},
                     ),
                     spacing="1em",

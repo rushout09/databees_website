@@ -98,13 +98,13 @@ STYLESHEETS = [
 
 
 LOGO_NAV_STYLE = {
-    "width": "1.605em",
-    "height": "1.5em",
+    "width": "3.605em",
+    "height": "3.5em",
 }
 
 LOGO_FOOTER_STYLE = {
-    "width": ["2.568em", "2.568em", "3.21em"],
-    "height": ["2.4em", "2.4em", "3em"],
+    "width": ["5.568em", "5.568em", "5.21em"],
+    "height": ["5.4em", "5.4em", "5em"],
 }
 
 BUTTON_STYLE = {
