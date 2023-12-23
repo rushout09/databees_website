@@ -378,49 +378,49 @@ def post_details() -> rx.Component:
                 rx.box(
                     rx.foreach(pysaas.PostState.paragraphs, post_paragraph),
                 ),
-                rx.cond(
-                    ~pysaas.State.show_spinner,
-                    rx.box(
-                        rx.vstack(
-                            rx.image(
-                                src="/logo.svg",
-                                height="2em",
-                                width="2em",
-                            ),
-                            rx.text(
-                                "Start your free trial today.",
-                                font_size=styles.H3_FONT_SIZE,
-                                font_weight=styles.BOLD_WEIGHT,
-                                color="black",
-                            ),
-                            rx.text(
-                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ",
-                                rx.cond(
-                                    pysaas.State.signed_out,
-                                    rx.span(
-                                        rx.link(
-                                            "Get started →",
-                                            href="/signup",
-                                            color=styles.ACCENT_COLOR,
-                                        ),
-                                    ),
-                                    rx.span(
-                                        rx.link(
-                                            "Get started →",
-                                            href="/dashboard",
-                                            color=styles.ACCENT_COLOR,
-                                        ),
-                                    ),
-                                ),
-                                color="#676767",
-                            ),
-                            margin_bottom="1em",
-                            style=styles.BOX_STYLES,
-                            min_height="12em",
-                        ),
-                        padding_top="3em",
-                    ),
-                ),
+                # rx.cond(
+                #     ~pysaas.State.show_spinner,
+                #     rx.box(
+                #         rx.vstack(
+                #             rx.image(
+                #                 src="/logo.svg",
+                #                 height="2em",
+                #                 width="2em",
+                #             ),
+                #             rx.text(
+                #                 "Start your free trial today.",
+                #                 font_size=styles.H3_FONT_SIZE,
+                #                 font_weight=styles.BOLD_WEIGHT,
+                #                 color="black",
+                #             ),
+                #             rx.text(
+                #                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation. ",
+                #                 rx.cond(
+                #                     pysaas.State.signed_out,
+                #                     rx.span(
+                #                         rx.link(
+                #                             "Get started →",
+                #                             href="/signup",
+                #                             color=styles.ACCENT_COLOR,
+                #                         ),
+                #                     ),
+                #                     rx.span(
+                #                         rx.link(
+                #                             "Get started →",
+                #                             href="/dashboard",
+                #                             color=styles.ACCENT_COLOR,
+                #                         ),
+                #                     ),
+                #                 ),
+                #                 color="#676767",
+                #             ),
+                #             margin_bottom="1em",
+                #             style=styles.BOX_STYLES,
+                #             min_height="12em",
+                #         ),
+                #         padding_top="3em",
+                #     ),
+                # ),
                 width="60%",
             ),
         ),
